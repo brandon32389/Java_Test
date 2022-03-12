@@ -1,35 +1,47 @@
 package com.example;
-
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.Period;
 
 public class Person {
-    // Person fields.
+    // Person internal fields.
     private String firstName;
     private String lastName;
-    private Date birthDate;
+    private LocalDate birthDate;
     private String emailAddress;
-    private String phone;
+    private String phoneNumber;
 
-    // Getter and setter for internal fields
+    //constructor
+    public Person (String fName, String lName, LocalDate dob, String email, String phone){
+        firstName = fName;
+        lastName = lName;
+        birthDate = dob;
+        emailAddress = email;
+        phoneNumber = phone;
+    }
+
+    // Getter and setter properties for internal fields.
     public String getFirstName() {return firstName;}
     public void setFirstName(String fn) { this.firstName = fn;}
 
     public String getLastName() {return lastName;}
     public void setLastName(String ln) { this.lastName = ln;}
 
-    public Date getL() {return birthDate;}
-    public void setBirthDate(Date bd) { this.birthDate = bd;}
+    public LocalDate getBirthDate() {return birthDate;}
+    public void setBirthDate(LocalDate bd) { this.birthDate = bd;}
 
     public String getEmailAddress() {return emailAddress;}
     public void setEmailAddress(String ea) { this.emailAddress = ea;}
 
-    public String getPhone() {return phone;}
-    public void setPhone(String p) { this.phone = p;}
+    public String getPhone() {return phoneNumber;}
+    public void setPhone(String p) { this.phoneNumber = p;}
 
-//    public int GetAge(){
-//       Date today = new Date();
-////        ZoneId zonedId = ZoneId.of( "America/Montreal" );
-////        LocalDate today = LocalDate.now( zonedId );
-////        System.out.println( "today : " + today );
-//    }
+    //Methods
+    public int GetAge(){
+        LocalDate today = LocalDate.now();
+
+        return Period.between(birthDate,today).getYears();
+    }
+    public void CleanPhoneNumber(){
+        phoneNumber = phoneNumber.replace("(","").replace(")","").replace("-","").replace(" ","");
+    }
 }
