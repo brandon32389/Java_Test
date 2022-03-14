@@ -1,0 +1,11 @@
+﻿id,firstName,lastName,DOB,emailAddress,phoneNumber,status
+1,Tony,Stark,6/16/1990,TonyStark@avengers.com,3145428341,Employee
+2,Steve,Rogers,5/25/1975,SteveRogers@avengers.com,4111659396,Student
+3,Thor,Odinson,12/25/1973,ThorOdinson@avengers.com,7288547489,Employee
+4,Loki,Odinson,12/5/1985,LokiOdinson@avengers.com,9120260303,Student
+5,Natasha,Rominoff,11/3/1977,NatashaRominoff@avengers.com,2277998602,Employee
+6,Bruce,Banner,9/8/1986,BruceBanner@avengers.com,9968068968,Student
+7,Peter,Parker,5/5/1983,PeterParker@avengers.com,6758365227,Employee
+8,Sam,Wilson,5/22/1971,SamWilson@avengers.com,8228009239,Student
+9,T'Challa,n/a,6/8/1986,T'Challan/a@avengers.com,4628154400,Employee
+10,Stephen,Strange,2/7/1981,StephenStrange@avengers.com,3628133045,Student
